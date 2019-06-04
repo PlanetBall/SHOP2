@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+	<div class="container">
+		<div class="row">
+			<div class="col-11"></div>
+			<div class="col-1 mt-4">				
+				<img src="trash.png" class="w-75 trash" style="position: absolute; transition: 0.05s">
+				<div class="font-weight-bold summ  bg-primary py-1 px-1 rounded" style="position: absolute; margin-left: 55% ">0</div>
+			</div>
+		</div>	
+		<div class="col-12">
+			<div class="row">
+				<div class="col-3">
+					<img src="jacket2.png" class="w-75">
+					<p>1000руб</p>
+					<button class="btn btn-success btn_1000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket2.png" class="w-75">
+					<p>1000руб</p>
+					<button class="btn btn-success btn_1000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket2.png" class="w-75">
+					<p>1000руб</p>
+					<button class="btn btn-success btn_1000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket2.png" class="w-75">
+					<p>1000руб</p>
+					<button class="btn btn-success btn_1000">Купить</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<img src="jacket3.png" class="w-75">
+					<p>2000 рублей</p>
+					<button class="btn btn-success btn_2000"> Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket3.png" class="w-75">
+					<p>2000 рублей</p>
+					<button class="btn btn-success btn_2000"> Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket3.png" class="w-75">
+					<p>2000 рублей</p>
+					<button class="btn btn-success btn_2000"> Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket3.png" class="w-75">
+					<p>2000 рублей</p>
+					<button class="btn btn-success btn_2000"> Купить</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<img src="jacket4.png" class="w-75">
+					<p>3000 рублей</p>
+					<button class="btn btn-success btn_3000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket4.png" class="w-75">
+					<p>3000 рублей</p>
+					<button class="btn btn-success btn_3000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket4.png" class="w-75">
+					<p>3000 рублей</p>
+					<button class="btn btn-success btn_3000">Купить</button>
+				</div>
+				<div class="col-3">
+					<img src="jacket4.png" class="w-75">
+					<p>3000 рублей</p>
+					<button class="btn btn-success btn_3000">Купить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+	let mny = 0
+	let btn1 = document.querySelectorAll(".btn_1000")
+	let btn2 = document.querySelectorAll(".btn_2000")
+	let btn3 = document.querySelectorAll(".btn_3000")
+
+	let fy = function(arq){
+		mny = mny + arq
+		document.querySelector(".summ").innerHTML = mny
+	}
+
+	for(let index= 0;index<4;index=index+1){
+  	btn1[index].onclick=function(){
+  		fy(1000)
+  		document.querySelector(".trash").style.marginTop = "10px"
+  		lel = function(){
+  			document.querySelector(".trash").style.marginTop = "0px"
+  		}
+  		setTimeout(lel, 50)
+ 		}
+	}
+
+	for(let ind= 0;ind<4;ind=ind+1){
+  	btn2[ind].onclick=function(){
+  		fy(2000)
+  		document.querySelector(".trash").style.marginTop = "10px"
+  		lel = function(){
+  			document.querySelector(".trash").style.marginTop = "0px"
+  		}
+  		setTimeout(lel, 50)
+ 		}
+	}
+
+	for(let inde= 0;inde<4;inde=inde+1){
+  	btn3[inde].onclick=function(){
+  		fy(3000)
+  		document.querySelector(".trash").style.marginTop = "10px"
+  		lel = function(){
+  			document.querySelector(".trash").style.marginTop = "0px"
+  		}
+  		setTimeout(lel, 50)
+ 		}
+	}
+
+	</script>
+</body>
+</html>
